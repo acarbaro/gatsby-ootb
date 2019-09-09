@@ -1,73 +1,293 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Pump up your site: Gatsby ootb</title>
-		<meta name="description" content="Gatsby talk @ Globant">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="lib/css/theme/gatsby.css">
-		<link rel="stylesheet" href="lib/css/github.css">
-		<!-- Printing and PDF exports -->
-		<script>
-			(function(d) {
-				var config = {
-					kitId: 'fnr1orp',
-					scriptTimeout: 3000,
-					async: true
-				},
-				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-			})(document);
-		</script>
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="dark">
-					<h1 style="font-size: 90px; margin-bottom: 0">Pump up your site</h1>
-					<h3 style="font-size: 43px; margin-bottom: 0">Gatsby out of the box</h3>
-					<p>by <a href="https://github.com/acarbaro/">Anthony Carbajal</a><br>
-					<small>antoncarbaro@gmail.com</small></p>
-					<p><small>Slides: <a href="https://acarbaro.github.io/gatsby-ootb/">git.io/fjjyG</a></small></p>
-					<div style="display: flex; justify-content: center; width: 100%; "><div style="width: 15%;" ><img src="./images/urlqr.png" alt="QR"></div></div>
-				</section>
-				<section>
-					<h1 style="font-size: 80px">👋 <em class="brand">Hola!</em> Soy Anthony.</h1>
-					<blockquote class="photo-quote">
-						<div class="photo"><img src="./images/antoncarbaro.jpg" alt="Anthony Carbajal"></div>
-						<div class="quote">
-							<ul style="list-style: none;">
-								<li>Web UI Dev @ Globant.</li>
-								<li>Gamer, Developer, Glober.</li>
-							</ul>
-						</div>
-					</blockquote>
-				</section>
-			</div>
-		</div>
+    <title>Pump up your site: Gatsby ootb</title>
+    <meta name="description" content="Gatsby talk @ Globant" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="lib/css/theme/gatsby.css" />
+    <link rel="stylesheet" href="lib/css/github.css" />
+    <!-- Printing and PDF exports -->
+    <script>
+      (function(d) {
+        var config = {
+            kitId: "fnr1orp",
+            scriptTimeout: 3000,
+            async: true
+          },
+          h = d.documentElement,
+          t = setTimeout(function() {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function() {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="dark">
+          <h1 style="font-size: 90px; margin-bottom: 0">Pump up your site</h1>
+          <h3 style="font-size: 43px; margin-bottom: 0">
+            Gatsby out of the box
+          </h3>
+          <p>
+            by <a href="https://github.com/acarbaro/">Anthony Carbajal</a><br />
+            <small>antoncarbaro@gmail.com</small>
+          </p>
+          <p>
+            <small
+              >Slides:
+              <a href="https://acarbaro.github.io/gatsby-ootb/"
+                >git.io/fjjyG</a
+              ></small
+            >
+          </p>
+          <div style="display: flex; justify-content: center; width: 100%; ">
+            <div style="width: 15%;">
+              <img src="./images/urlqr.png" alt="QR" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1 style="font-size: 80px">
+            👋 <em class="brand">Hola!</em> Soy Anthony.
+          </h1>
+          <blockquote class="photo-quote">
+            <div class="photo">
+              <img src="./images/antoncarbaro.jpg" alt="Anthony Carbajal" />
+            </div>
+            <div class="quote">
+              <ul style="list-style: none;">
+                <li>Web UI Dev @ Globant.</li>
+                <li>Gamer, Developer, Glober.</li>
+              </ul>
+            </div>
+          </blockquote>
+        </section>
+        <section>
+          <h2 style="font-size: 200%;">¿De qué hablaremos hoy?</h2>
+          <ul>
+            <li class="fragment">¿Qué es Gatsby y por qué es importante?</li>
+            <li class="fragment">Fundamentos de Gatsby</li>
+            <li class="fragment">Usar GraphQL en Gatsby</li>
+            <li class="fragment">Construir y deployar un sitio en Gatsby</li>
+          </ul>
+        </section>
+        <section class="dark">
+          <h2 class="no-margin" style="font-size: 240%;">¿Qué es Gatsby?</h2>
+          <h4 class="fragment">
+            Gatsby es una <span class="underlined">atajo</span> que permite a
+            los desarrolladores construir mágnificas apps y websites.
+          </h4>
+        </section>
+        <section>
+          <h3>
+            La mayoría de flujos de trabajo, involucran un
+            <strong>boilerplate</strong> al empezar el desarrollo.
+          </h3>
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate01.png"
+            alt="Visualización del pipeline para enviar el código del editor a un navegador."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate02.png"
+            alt="Mismo pipeline, pero sin Webpack incluido."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate03.png"
+            alt="Previous image + Babel."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate04.png"
+            alt="Previous image + PostCSS."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate05.png"
+            alt="Previous image + Node.JS."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate06.png"
+            alt="Previous image + Kubernetes."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate07.png"
+            alt="Previous image + NGINX."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/boilerplate08.png"
+            alt="Previous image + Fastly."
+          />
+        </section>
+        <section>
+          <h3>
+            Gatsby <em>elimina la necesidad de los boilerplates</em> al empezar
+            el desarrollo y el deploy de las apps a producción.
+          </h3>
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/no-boilerplate.png"
+            alt="Simplified workflow with Gatsby + Netlify."
+          />
+        </section>
+        <section>
+          <img
+            class="no-border"
+            src="./images/no-boilerplate-tools.png"
+            alt="Simplified workflow with Gatsby + Netlify showing React and GraphQL as tools."
+          />
+        </section>
+        <section class="dark">
+          <h2 class="no-margin" style="font-size: 240%;">¿Qué es Gatsby?</h2>
+          <h4 class="fragment">
+            Gatsby es un <em class="underlined">orchestration layer</em> para
+            manipular el Content Mesh y su numerosas fuentes de data.
+          </h4>
+        </section>
+      </div>
+    </div>
 
-		<script src="js/reveal.js"></script>
+    <footer class="v2">
+      <ul class="inline">
+        <li>
+          <a href="https://git.io/fjjyG" title="Revisa el slide online."
+            >git.io/fjjyG</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/antoncarbaro/"
+            title="Mi LinkedIn"
+            >antoncarbaro</a
+          >
+        </li>
+        <li>
+          <a
+            class="no-icon"
+            href="https://twitter.com/intent/tweet?text=Intro%20to%20Gatsby%20by%20%40jlengstorf&amp;hashtags=&amp;related=jlengstorf&amp;url=https%3A%2F%2Fgit.io%2Fworkshop-gatsby-mdx"
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+    <script>
+      // We'll reference this element several times
+      var htmlElement = document.querySelector("html");
+
+      // Bind a function to the `fragmentshown` event so we can do some custom bits
+      Reveal.addEventListener("fragmentshown", function(event) {
+        var fragment = event.fragment;
+
+        // For fragments with a `dim-the-lights` class, we dim the lights
+        if (
+          fragment.classList &&
+          fragment.classList.contains("dim-the-lights")
+        ) {
+          htmlElement.classList.add("blackout");
+        }
+      });
+
+      // Define a quick function to remove the blackout class from the document
+      var removeBlackout = function removeBlackout() {
+        return htmlElement.classList.remove("blackout");
+      };
+
+      // Bind the function to Reveal actions so we get the desired effect
+      Reveal.addEventListener("fragmenthidden", removeBlackout);
+      Reveal.addEventListener("slidechanged", removeBlackout);
+
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        transition: "none",
+        backgroundTransition: "none",
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>
