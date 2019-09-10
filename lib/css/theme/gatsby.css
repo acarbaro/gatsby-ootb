@@ -311,7 +311,7 @@ html::after {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(72, 67, 79, 0);
+  background: rgba(64, 67, 70, 0);
   transition: background 150ms ease-in-out; }
 
 html.blackout::after, html.dimmer::after {
@@ -724,7 +724,7 @@ section .right {
 footer {
   display: none;
   position: absolute;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(24, 26, 27, 0.7);
   bottom: 0;
   width: 100%;
   z-index: 1000; }
@@ -743,8 +743,7 @@ footer {
       font-family: "FuturaPT", "Futura", mallory, sans-serif;
       font-size: 18px;
       font-weight: 600;
-      color: #666461;
-      text-shadow: 1px 1px 1px #fff; }
+      color: rgb(196, 191, 183);; }
       footer ul.inline li a {
         color: inherit;
         text-decoration: none; }
